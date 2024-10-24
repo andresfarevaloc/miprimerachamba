@@ -1,4 +1,5 @@
 - name: Upgrade all packages
-  ansible.builtin.dnf:
+  hosts: web
+  dnf:
     name: "*"
     state: latest
