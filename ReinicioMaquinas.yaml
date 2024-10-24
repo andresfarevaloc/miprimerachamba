@@ -1,0 +1,7 @@
+- name: Actualizar sistemas con dnf
+  hosts: all  # Cambia 'all' por el grupo de hosts que deseas actualizar
+  become: yes
+  tasks:
+    - name: Actualizar todos los paquetes
+      dnf:
+        upgrade: distros
